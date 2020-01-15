@@ -75,4 +75,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Relation", name: "relation", widget: "relation", collection: "blog", searchFields: ["title"], valueFields: ["title"]}
+      - {label: "Relation", name: "relation", widget: "relation", collection: "blog", searchFields: ["title"], valueField: "title"}
