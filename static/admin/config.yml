@@ -76,3 +76,22 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Relation", name: "relation", widget: "relation", collection: "blog", searchFields: ["title"], valueField: "title"}
+
+  - name: "resources"
+    label: "Resources"
+    folder: "src/resources"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Key", name: "key", widget: "string"}
+      - name: "contents"
+        label: "Contents"
+        folder: "src/contents"
+        wedget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
+      - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title"}
