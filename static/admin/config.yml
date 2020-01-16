@@ -92,4 +92,4 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      <<: *resourceFields
+      - <<: *resourceFields
