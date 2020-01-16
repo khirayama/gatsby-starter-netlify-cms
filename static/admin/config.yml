@@ -12,14 +12,13 @@ media_folder: static/img
 public_folder: /img
 
 resourceFields: &resourceFields
-  fields:
-    - {label: "Key", name: "key", widget: "string"}
-    - {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Description", name: "description", widget: "text"}
-    - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title"}
+  - {label: "Key", name: "key", widget: "string"}
+  - {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
+  - {label: "Title", name: "title", widget: "string"}
+  - {label: "Publish Date", name: "date", widget: "datetime"}
+  - {label: "Description", name: "description", widget: "text"}
+  - {label: "Body", name: "body", widget: "markdown"}
+  - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title"}
 
 collections:
   - name: "blog"
