@@ -35,4 +35,4 @@ collections:
       - {name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
       - {name: "title", widget: "string"}
       - {name: "body", widget: "markdown"}
-      - {name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true}
+      - {name: "relation", widget: "relation", collection: "tags", displayFields: ["key", "locale", "title"], valueField: "key", multiple: true}
