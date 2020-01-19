@@ -11,19 +11,28 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-resourceFields: &resourceFields |-
-  {label: "Key", name: "key", widget: "string"}
-  {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
-  {label: "Name", name: "name", widget: "string"}
-  {label: "Body", name: "body", widget: "markdown"}
-  {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title"}
-  {label: "Publish Date", name: "date", widget: "datetime"}
-
 collections:
+  - name: "tags"
+    label: "Tags"
+    folder: "src/tags"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Key", name: "key", widget: "string"}
+      - {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+
   - name: "plants"
     label: "Plants"
     folder: "src/plants"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - *resourceFields
+      - {label: "Key", name: "key", widget: "string"}
+      - {label: "Locale", name: "locale", widget: "select", select: ["ja", "en"]}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
