@@ -19,7 +19,7 @@ collections:
     slug: "{{key}}-{{locale}}"
     fields:
       - {label: "Key", name: "key", widget: "string"}
-      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"]}
+      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -31,7 +31,7 @@ collections:
     slug: "{{key}}-{{locale}}"
     fields:
       - {label: "Key", name: "key", widget: "string"}
-      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"]}
+      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true}
