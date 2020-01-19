@@ -19,11 +19,10 @@ collections:
     slug: "{{key}}.{{locale}}"
     identifier_field: "{{key}}.{{locale}}"
     fields:
-      - {label: "Key", name: "key", widget: "string"}
-      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {name: "key", widget: "string"}
+      - {name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
+      - {name: "title", widget: "string"}
+      - {name: "body", widget: "markdown"}
 
   - name: "plants"
     label: "Plants"
@@ -32,8 +31,8 @@ collections:
     slug: "{{key}}.{{locale}}"
     identifier_field: "{{key}}.{{locale}}"
     fields:
-      - {label: "Key", name: "key", widget: "string"}
-      - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Relation", name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true}
+      - {name: "key", widget: "string"}
+      - {name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
+      - {name: "title", widget: "string"}
+      - {name: "body", widget: "markdown"}
+      - {name: "relation", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true}
