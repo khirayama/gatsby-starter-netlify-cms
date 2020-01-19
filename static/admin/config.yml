@@ -16,8 +16,8 @@ collections:
     label: "Tags"
     folder: "src/tags"
     create: true
-    identifier_field: slug
-    slug: "{{key}}-{{locale}}"
+    slug: "{{key}}.{{locale}}"
+    identifier_field: "{{key}}.{{locale}}"
     fields:
       - {label: "Key", name: "key", widget: "string"}
       - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
@@ -29,8 +29,8 @@ collections:
     label: "Plants"
     folder: "src/plants"
     create: true
-    identifier_field: slug
-    slug: "{{key}}-{{locale}}"
+    slug: "{{key}}.{{locale}}"
+    identifier_field: "{{key}}.{{locale}}"
     fields:
       - {label: "Key", name: "key", widget: "string"}
       - {label: "Locale", name: "locale", widget: "select", options: ["ja", "en"], default: "ja"}
