@@ -14,7 +14,7 @@ public_folder: /img
 collections:
   - name: "tags"
     label: "Tags"
-    folder: "src/tags"
+    folder: "src/pages/tags"
     create: true
     slug: "{{key}}.{{locale}}"
     identifier_field: "{{key}}.{{locale}}"
@@ -26,7 +26,7 @@ collections:
 
   - name: "plants"
     label: "Plants"
-    folder: "src/plants"
+    folder: "src/pages/plants"
     create: true
     slug: "{{key}}.{{locale}}"
     identifier_field: "{{key}}.{{locale}}"
